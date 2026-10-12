@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="
+https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
+" rel="stylesheet">
+<link rel="stylesheet" href="tailwind.css">
+</head>
+<body class="bg-gradient-to-r from-purple-400 to-purple-800">
+    <div class="relative h-80 w-96 mx-auto mt-10">
+        <textarea name="" class="w-full h-full bg-pink-200 border-2 border-solid border-pink-800 focus:outline-none
+         rounded-md " id="textbox" placeholder="Enter here..."></textarea>
+     <p id="count" class="absolute bottom-0 right-3">200/200</p>
+    </div>
+    
+     
+     <script>
+        const textbox = document.getElementById('textbox')
+        const count = document.getElementById('count')
+
+        textbox.addEventListener('input',function(){
+            var text = textbox.value.length
+            if(text<=200){
+                count.textContent=200-text+"/200"
+            }
+            else{
+                alert("You have exceeded the character limit of 200 characters")
+            }
+        })
+     </script>
+     
+
+        
+    
+</body>
+</html>
